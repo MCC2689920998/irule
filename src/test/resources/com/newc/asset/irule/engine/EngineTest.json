@@ -1,0 +1,33 @@
+{
+  "execute" : {
+    "model" : {
+      "customer": {
+        "id" : "310115200001013639",
+        "name" : "王千禧",
+        "sex" : "male"
+      },
+      "salary" : {
+        "month1" : 10000,
+        "month2" : 20000,
+        "month3" : 30000,
+        "month4" : 40000,
+        "month5" : 50000,
+        "month6" : 60000,
+        "month7" : 70000,
+        "month8" : 80000,
+        "month9" : 90000,
+        "month10" : 100000,
+        "month11" : 110000,
+        "month12" : 120000
+      }
+    },
+    "ruleSet" : [{
+      "factors" : ["customer.id"],
+      "algorithm" : {
+        "type" : "substr",
+        "config" : [6, 8]
+      },
+      "decision" : ["decision.birthday"]
+    }]
+  }
+}
