@@ -20,5 +20,6 @@ dependencies {
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
 
+    compile group: 'com.newc.asset', name: 'iframe', version: '0.0.1-SNAPSHOT'
     testCompile group: 'com.newc.asset', name: 'itest', version: '0.0.2-SNAPSHOT'
 }
