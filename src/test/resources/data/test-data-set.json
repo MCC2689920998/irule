@@ -1,0 +1,411 @@
+{
+  "array-example" : {
+    "model" : {
+      "person" : [{
+        "id" : "310115200001011713",
+        "income" : [{
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }, {
+          "salary": 1000, "stock": 1000
+        }]
+      }, {
+        "id" : "310115200001011714",
+        "income" : [{
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }, {
+          "salary": 2000, "stock": 2000
+        }]
+      }]
+    },
+    "rule-base" : {
+      "sel" : [
+        "310115200001011713"
+      ],
+      "nodes" : [
+        {
+          "path": "person",
+          "ks": ["id"],
+          "vs": {"income" : {"salary": null, "stock": null}}
+        }
+      ]
+    },
+    "rule-no-sel" : {
+      "sources" : [
+        {
+          "path": "person",
+          "vs": {"income" : {"salary": null, "stock": null}}
+        }
+      ]
+    },
+    "rule-traversal-type" : {
+      "sources" : [
+        {
+          "path": "person",
+          "ks": ["id"],
+          "vs": {"income" : {"salary": null, "stock": null}}
+        }
+      ]
+    }
+  },
+  "object-example" : {
+    "model" : {
+      "person" : [
+        {
+          "id": "310115200001011713",
+          "income": {
+            "month1": {
+              "salary": 1000, "stock": 1000
+            },
+            "month2": {
+              "salary": 1000, "stock": 1000
+            },
+            "month3": {
+              "salary": 1000, "stock": 1000
+            },
+            "month4": {
+              "salary": 1000, "stock": 1000
+            },
+            "month5": {
+              "salary": 1000, "stock": 1000
+            },
+            "month6": {
+              "salary": 1000, "stock": 1000
+            },
+            "month7": {
+              "salary": 1000, "stock": 1000
+            },
+            "month8": {
+              "salary": 1000, "stock": 1000
+            },
+            "month9": {
+              "salary": 1000, "stock": 1000
+            },
+            "month10": {
+              "salary": 1000, "stock": 1000
+            },
+            "month11": {
+              "salary": 1000, "stock": 1000
+            },
+            "month12": {
+              "salary": 1000, "stock": 1000
+            }
+          }
+        },
+        {
+          "id": "310115200001011714",
+          "income": {
+            "month1": {
+              "salary": 2000, "stock": 2000
+            },
+            "month2": {
+              "salary": 2000, "stock": 2000
+            },
+            "month3": {
+              "salary": 2000, "stock": 2000
+            },
+            "month4": {
+              "salary": 2000, "stock": 2000
+            },
+            "month5": {
+              "salary": 2000, "stock": 2000
+            },
+            "month6": {
+              "salary": 2000, "stock": 2000
+            },
+            "month7": {
+              "salary": 2000, "stock": 2000
+            },
+            "month8": {
+              "salary": 2000, "stock": 2000
+            },
+            "month9": {
+              "salary": 2000, "stock": 2000
+            },
+            "month10": {
+              "salary": 2000, "stock": 2000
+            },
+            "month11": {
+              "salary": 2000, "stock": 2000
+            },
+            "month12": {
+              "salary": 2000, "stock": 2000
+            }
+          }
+        }]
+    },
+    "rule-sel" : {
+      "sel" : [
+        "310115200001011713"
+      ],
+      "sources" : [
+        {
+          "path": "person",
+          "ks": ["id"],
+          "vs": {
+            "income" : {
+              "month1": {"salary": null, "stock": null},
+              "month2": {"salary": null, "stock": null},
+              "month3": {"salary": null, "stock": null},
+              "month4": {"salary": null, "stock": null},
+              "month5": {"salary": null, "stock": null},
+              "month6": {"salary": null, "stock": null},
+              "month7": {"salary": null, "stock": null},
+              "month8": {"salary": null, "stock": null},
+              "month9": {"salary": null, "stock": null},
+              "month10": {"salary": null, "stock": null},
+              "month11": {"salary": null, "stock": null},
+              "month12": {"salary": null, "stock": null}
+            }
+          }
+        }
+      ]
+    },
+    "rule-sel-null" : {
+      "sel" : [
+        "null"
+      ],
+      "sources" : [
+        {
+          "path": "person",
+          "ks": ["id"],
+          "vs": {
+            "income" : {
+              "month1": {"salary": null, "stock": null},
+              "month2": {"salary": null, "stock": null},
+              "month3": {"salary": null, "stock": null},
+              "month4": {"salary": null, "stock": null},
+              "month5": {"salary": null, "stock": null},
+              "month6": {"salary": null, "stock": null},
+              "month7": {"salary": null, "stock": null},
+              "month8": {"salary": null, "stock": null},
+              "month9": {"salary": null, "stock": null},
+              "month10": {"salary": null, "stock": null},
+              "month11": {"salary": null, "stock": null},
+              "month12": {"salary": null, "stock": null}
+            }
+          }
+        }
+      ]
+    },
+    "rule-reduce" : {
+      "sources" : [
+        {
+          "path": "person",
+          "vs": {
+            "income" : {
+              "month1": {"salary": null, "stock": null},
+              "month2": {"salary": null, "stock": null},
+              "month3": {"salary": null, "stock": null},
+              "month4": {"salary": null, "stock": null},
+              "month5": {"salary": null, "stock": null},
+              "month6": {"salary": null, "stock": null},
+              "month7": {"salary": null, "stock": null},
+              "month8": {"salary": null, "stock": null},
+              "month9": {"salary": null, "stock": null},
+              "month10": {"salary": null, "stock": null},
+              "month11": {"salary": null, "stock": null},
+              "month12": {"salary": null, "stock": null}
+            }
+          }
+        }
+      ]
+    },
+    "rule-traversal" : {
+      "sources" : [
+        {
+          "path": "person",
+          "ks": ["id"],
+          "vs": {
+            "income" : {
+              "month1": {"salary": null, "stock": null},
+              "month2": {"salary": null, "stock": null},
+              "month3": {"salary": null, "stock": null},
+              "month4": {"salary": null, "stock": null},
+              "month5": {"salary": null, "stock": null},
+              "month6": {"salary": null, "stock": null},
+              "month7": {"salary": null, "stock": null},
+              "month8": {"salary": null, "stock": null},
+              "month9": {"salary": null, "stock": null},
+              "month10": {"salary": null, "stock": null},
+              "month11": {"salary": null, "stock": null},
+              "month12": {"salary": null, "stock": null}
+            }
+          }
+        }
+      ]
+    },
+    "rule-sel-sum": {
+      "sel" : [
+        "310115200001011713"
+      ],
+      "sources" : [
+        {
+          "path": "person",
+          "ks": ["id"],
+          "vs": {
+            "income" : {
+              "month1": {"salary": null, "stock": null},
+              "month2": {"salary": null, "stock": null},
+              "month3": {"salary": null, "stock": null},
+              "month4": {"salary": null, "stock": null},
+              "month5": {"salary": null, "stock": null},
+              "month6": {"salary": null, "stock": null},
+              "month7": {"salary": null, "stock": null},
+              "month8": {"salary": null, "stock": null},
+              "month9": {"salary": null, "stock": null},
+              "month10": {"salary": null, "stock": null},
+              "month11": {"salary": null, "stock": null},
+              "month12": {"salary": null, "stock": null}
+            }
+          }
+        }
+      ],
+      "alg" : {
+        "name" : "sum",
+        "config" : null
+      },
+      "target" : {
+        "path" : "person",
+        "ks":["id"],
+        "vs":{"total": null}
+      }
+    },
+    "rule-all-sum": {
+      "sources" : [
+        {
+          "path": "person",
+          "vs": {
+            "income" : {
+              "month1": {"salary": null, "stock": null},
+              "month2": {"salary": null, "stock": null},
+              "month3": {"salary": null, "stock": null},
+              "month4": {"salary": null, "stock": null},
+              "month5": {"salary": null, "stock": null},
+              "month6": {"salary": null, "stock": null},
+              "month7": {"salary": null, "stock": null},
+              "month8": {"salary": null, "stock": null},
+              "month9": {"salary": null, "stock": null},
+              "month10": {"salary": null, "stock": null},
+              "month11": {"salary": null, "stock": null},
+              "month12": {"salary": null, "stock": null}
+            }
+          }
+        }
+      ],
+      "alg" : {
+        "name" : "sum",
+        "config" : null
+      },
+      "target" : {
+        "path" : "",
+        "vs":{"total":null}
+      }
+    },
+    "rule-traversal-sum": {
+      "sources" : [
+        {
+          "path": "person",
+          "ks": ["id"],
+          "vs": {
+            "income" : {
+              "month1": {"salary": null, "stock": null},
+              "month2": {"salary": null, "stock": null},
+              "month3": {"salary": null, "stock": null},
+              "month4": {"salary": null, "stock": null},
+              "month5": {"salary": null, "stock": null},
+              "month6": {"salary": null, "stock": null},
+              "month7": {"salary": null, "stock": null},
+              "month8": {"salary": null, "stock": null},
+              "month9": {"salary": null, "stock": null},
+              "month10": {"salary": null, "stock": null},
+              "month11": {"salary": null, "stock": null},
+              "month12": {"salary": null, "stock": null}
+            }
+          }
+        }
+      ],
+      "alg" : {
+        "name" : "sum",
+        "config" : null
+      },
+      "target" : {
+        "path" : "person",
+        "ks":["id"],
+        "vs":{"total": null}
+      }
+    },
+    "rule-diferent-nodes-sum": {
+      "sources" : [
+        {
+          "path": "person",
+          "ks": ["id"],
+          "vs": {
+            "income" : {
+              "month1": {"salary": null, "stock": null},
+              "month2": {"salary": null, "stock": null},
+              "month3": {"salary": null, "stock": null},
+              "month4": {"salary": null, "stock": null},
+              "month5": {"salary": null, "stock": null},
+              "month6": {"salary": null, "stock": null},
+              "month7": {"salary": null, "stock": null},
+              "month8": {"salary": null, "stock": null},
+              "month9": {"salary": null, "stock": null},
+              "month10": {"salary": null, "stock": null},
+              "month11": {"salary": null, "stock": null},
+              "month12": {"salary": null, "stock": null}
+            }
+          }
+        }
+      ],
+      "alg" : {
+        "name" : "sum",
+        "config" : null
+      },
+      "target" : {
+        "path" : "financial",
+        "ks":["id"],
+        "vs":{"total": null}
+      }
+    }
+  }
+}

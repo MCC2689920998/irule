@@ -6,10 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by paul on 2018/5/1.
+ * Created by paul on 2018/5/12.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface Algorithm {
+public @interface AlgConfg {
     String value() default "";
+    String[] config() default {};
 }

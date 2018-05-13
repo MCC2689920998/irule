@@ -15,11 +15,6 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.1.RELEASE'
-    // https://mvnrepository.com/artifact/org.projectlombok/lombok
-    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
-
-    compile group: 'com.newc.asset', name: 'iframe', version: '0.0.1-SNAPSHOT'
+    compile group: 'com.newc.asset', name: 'iframe', version: '0.0.2'
     testCompile group: 'com.newc.asset', name: 'itest', version: '0.0.2-SNAPSHOT'
 }

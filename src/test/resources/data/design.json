@@ -1,0 +1,107 @@
+{
+  "example" : {
+    // Selection's value must be an array of Primitive Type.
+    // TODO next, think some operations other than equals
+    "sel" : [
+      "ShangHai",
+      25
+    ],
+    // This is the indicator for our engine to find the correct data node
+    // and pick up the correct data
+    "sources" : [
+      {
+        // Maybe we can just use a string to indicate the data node's path
+        "path": "model.person",
+        // ks means KeyS, the number of ks is equal to the number of selection.
+        "ks": ["location", "age"],
+        // vs means ValueS, the item should be complicated object in order to indicate to the correct value nodes.
+        // {} means we identified the current node is an Object, [] means we identified the current node is an array
+        "vs": {"income" : {"salary": null, "stock": null}}
+      }
+    ],
+    // This node is designed to configure the algorithm used to handle the inputs.
+    "algorithm" : {
+      // The name of the algorithm, in java code there must be some method annotated with `@AlgSet("sum")`
+      "name" : "sum",
+      // Cnfiguration is optional, some algorithm does not need configuration.
+      "config" : null
+    },
+    // This node tells us where to store the result.
+    "target" : {
+      // The path of the nodes in the Model
+      "path" : "model.person",
+      // Same as ks in sources, when not exsits, we will store the result in only one single node.
+      "ks":["location", "age"],
+      // Same as vs but this time we will store the result here.
+      "vs":{"total": null}
+    }
+  },
+  "example2" : {
+    // Selection's value must be an array of Primitive Type.
+    // TODO next, think some operations other than equals
+    "sel" : [
+      "ShangHai",
+      25
+    ],
+    // This is the indicator for our engine to find the correct data node
+    // and pick up the correct data
+    "sources" : [
+      {
+        // Maybe we can just use a string to indicate the data node's path
+        "path": "model.person",
+        // ks means KeyS, the number of ks is equal to the number of selection.
+        "ks": ["location", "age"],
+        // vs means ValueS, the item should be complicated object in order to indicate to the correct value nodes.
+        // {} means we identified the current node is an Object, [] means we identified the current node is an array
+        "vs": [{
+          "income.month1" : ["salary", "stock"]
+        }, {
+          "income.month2" : ["salary", "stock"]
+        }, {
+          "income.month3" : ["salary", "stock"]
+        }, {
+          "income.month4" : ["salary", "stock"]
+        }, {
+          "income.month5" : ["salary", "stock"]
+        }, {
+          "income.month6" : ["salary", "stock"]
+        }, {
+          "income.month7" : ["salary", "stock"]
+        }, {
+          "income.month8" : ["salary", "stock"]
+        }, {
+          "income.month9" : ["salary", "stock"]
+        }, {
+          "income.month10" : ["salary", "stock"]
+        }, {
+          "income.month11" : ["salary", "stock"]
+        }, {
+          "income.month12" : ["salary", "stock"]
+        }]
+      }
+    ]
+  },
+  "example3" : {
+    // Selection's value must be an array of Primitive Type.
+    // TODO next, think some operations other than equals
+    "sel" : [
+      "ShangHai",
+      25
+    ],
+    // This is the indicator for our engine to find the correct data node
+    // and pick up the correct data
+    "sources" : [
+      {
+        // Maybe we can just use a string to indicate the data node's path
+        "path": "model.person",
+        // ks means KeyS, the number of ks is equal to the number of selection.
+        "ks": ["location", "age"],
+        // vs means the ValueS, we use Embedded JSONObject to indicate the path to the final key
+        // When value is null, that means this is the target node.
+        "vs": [{
+          "company" : {"bonus" : null, "income" : {"salary": null, "stock": null}}
+        }]
+      }
+    ]
+  }
+}

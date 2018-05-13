@@ -1,11 +1,44 @@
 package com.newc.asset.irule.entity;
 
-import lombok.Data;
+import com.newc.asset.iframe.cache.GlobalCache;
+import com.newc.asset.iframe.entity.Identity;
+import com.newc.asset.iframe.util.IdentityBuilder;
+import lombok.Getter;
+import lombok.Setter;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.util.Assert;
 
-@Data
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.newc.asset.iframe.util.IdentityBuilder.MetaIdentity;
+
+/**
+ * Rule means we will use it to find the correct path to the target we want to go.
+ * Created by paul on 2018/5/9.
+ */
+@Setter
+@Getter
 public class Rule {
-    private Factor[] factors;
-    private Operator operator;
-    private Conclusion conclusion;
-}
+    private static final Log logger = LogFactory.getLog(Rule.class);
+    private static final GlobalCache cache = GlobalCache.getInstance();
 
+    private Identity values = MetaIdentity;
+    private List<Milestone> sources = new ArrayList<Milestone>();
+    private Algorithm alg = null; // Jackson will set this property with default Setter method.
+    private Milestone target = null; // Jackson will set this property with default Setter method.
+
+    /**
+     * Set method used by jackson.
+     */
+    public void setSel(List<Object> sel) {
+        if (sel == null) sel = new ArrayList<Object>();
+        values = IdentityBuilder.build(sel.toArray());
+    }
+
+    public void setNodes(List<Milestone> nodes) {
+        Assert.notNull(nodes, "nodes should not be null.");
+        this.sources = nodes;
+    }
+}
