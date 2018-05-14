@@ -13,7 +13,7 @@
         // Maybe we can just use a string to indicate the data node's path
         "path": "model.person",
         // ks means KeyS, the number of ks is equal to the number of selection.
-        "ks": ["location", "age"],
+        "ks": {"location":null, "age": null},
         // vs means ValueS, the item should be complicated object in order to indicate to the correct value nodes.
         // {} means we identified the current node is an Object, [] means we identified the current node is an array
         "vs": {"income" : {"salary": null, "stock": null}}
@@ -31,7 +31,7 @@
       // The path of the nodes in the Model
       "path" : "model.person",
       // Same as ks in sources, when not exsits, we will store the result in only one single node.
-      "ks":["location", "age"],
+      "ks":{"location":null, "age": null},
       // Same as vs but this time we will store the result here.
       "vs":{"total": null}
     }
