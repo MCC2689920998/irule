@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 public class ComponentScanTests {
     @Test
     public void checkComponentScanFeature() throws IOException {
-        String packageSearchPath = "classpath*:" + "com/newc/asset/irule/alg/**/*.class";
+        String packageSearchPath = "classpath*:" + "com/ppmoney/asset/irule/algorithm/**/*.class";
         PathMatchingResourcePatternResolver resourcePatternResolver = new PathMatchingResourcePatternResolver();
         Resource[] resources = resourcePatternResolver.getResources(packageSearchPath);
         assertThat(resources, is(notNullValue()));
