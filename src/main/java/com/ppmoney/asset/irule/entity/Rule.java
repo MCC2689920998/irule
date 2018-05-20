@@ -25,9 +25,6 @@ public class Rule {
     private static final Log logger = LogFactory.getLog(Rule.class);
     private static final GlobalCache cache = GlobalCache.getInstance();
 
-    @Id
-    private Long id;
-
     private Identity values = MetaIdentity;
 
     private List<Milestone> sources = new ArrayList<Milestone>();
