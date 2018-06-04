@@ -28,6 +28,7 @@ public class RuleRunnerTest {
     @Test @TestData(node = "object-example")
     public void shouldTraversalOnce() throws IOException {
         JSONObject model = TestDataLoader.loadTestData(JSONObject.class, "model");
+        System.out.println(model.toString());
         Rule rule = TestDataLoader.loadTestData(Rule.class, "rule-sel");
 
         RuleRunner extractor = new RuleRunner(model, rule);

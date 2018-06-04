@@ -1,38 +1,50 @@
 {
   "example" : {
     // Selection's value must be an array of Primitive Type.
+    //选择的值必须是基元类型的数组
     // TODO next, think some operations other than equals
-    "sel" : [
-      "ShangHai",
-      25
-    ],
+    //接下来要做的是，考虑一些不相等的操作
+    "sel" : [ "ShangHai", 25 ],
     // This is the indicator for our engine to find the correct data node
+    //这是我们的引擎找到正确数据节点的指示器。
     // and pick up the correct data
+    //和找到正确的数据
     "sources" : [
       {
         // Maybe we can just use a string to indicate the data node's path
+        //也许我们可以用一个字符串来表示数据节点的路径
         "path": "model.person",
         // ks means KeyS, the number of ks is equal to the number of selection.
+        //k表示键，k的数量等于选择的数量。
         "ks": {"location":null, "age": null},
         // vs means ValueS, the item should be complicated object in order to indicate to the correct value nodes.
+        // vs表示值，项应该是复杂的对象，以指示到正确的值节点。
         // {} means we identified the current node is an Object, [] means we identified the current node is an array
+        // {}意味着我们确定当前节点是一个对象，[]意味着我们确定当前节点是一个数组。
         "vs": {"income" : {"salary": null, "stock": null}}
       }
     ],
     // This node is designed to configure the algorithm used to handle the inputs.
+    // 这个节点被设计为配置用于处理输入的算法。
     "algorithm" : {
       // The name of the algorithm, in java code there must be some method annotated with `@AlgSet("sum")`
+      //算法的名称，在java代码中，必须有一些用“@AlgSet(“sum”)”注释的方法
       "name" : "sum",
       // Cnfiguration is optional, some algorithm does not need configuration.
+      //Cnfiguration是可选的，有些算法不需要配置。
       "config" : null
     },
     // This node tells us where to store the result.
+    //这个节点告诉我们在哪里存储结果。
     "target" : {
       // The path of the nodes in the Model
+      //模型中节点的路径
       "path" : "model.person",
       // Same as ks in sources, when not exsits, we will store the result in only one single node.
+      // 与sources 中的ks相同，当不存在时，我们将只将结果存储在一个节点中。
       "ks":{"location":null, "age": null},
       // Same as vs but this time we will store the result here.
+      //和vs一样，但是这次我们将把结果存储在这里。
       "vs":{"total": null}
     }
   },
